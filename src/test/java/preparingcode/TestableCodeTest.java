@@ -22,7 +22,7 @@ public class TestableCodeTest {
     @DisplayName("Test greeting special and known name")
     public void testSpecialAndKnownNameGreeting() {
         String name = "Tess";
-        String outcome = "I know you, Tess.You're even on our VIP list!";
+        String outcome = "I know you, Tess. You're even on our VIP list!";
         assertEquals(outcome, tc.greetUser(name));
     }
 

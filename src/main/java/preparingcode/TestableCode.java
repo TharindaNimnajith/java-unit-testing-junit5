@@ -12,7 +12,7 @@ public class TestableCode {
         if (Arrays.asList(knownNames).contains(name)) {
             greetUser += "I know you, " + name + ".";
             if (Arrays.asList(specialNames).contains(name))
-                greetUser += "You're even on our VIP list!";
+                greetUser += " You're even on our VIP list!";
         } else if (Arrays.asList(specialNames).contains(name))
             greetUser += "I don't know you, " + name + ". But you are on our VIP list!";
         else
