@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class BankAccountAssertionsTest {
     @Test
-    @DisplayName("Withdraw 500 successfully")
+    @DisplayName("Withdraw 300 successfully")
     public void testWithdraw() {
         BankAccount bankAccount = new BankAccount(500, -1000);
         bankAccount.withdraw(300);
@@ -15,7 +15,7 @@ public class BankAccountAssertionsTest {
     }
 
     @Test
-    @DisplayName("Deposit 400 successfully")
+    @DisplayName("Deposit 500 successfully")
     public void testDeposit() {
         BankAccount bankAccount = new BankAccount(400, 0);
         bankAccount.deposit(500);
@@ -61,6 +61,7 @@ public class BankAccountAssertionsTest {
         assertAll(() -> bankAccount.deposit(200), () -> bankAccount.withdraw(450));
     }
 
+    @SuppressWarnings("CommentedOutCode")
     @Test
     @DisplayName("Test speed deposit")
     public void testDepositTimeout() {

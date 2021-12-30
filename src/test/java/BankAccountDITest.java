@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @ExtendWith(BankAccountParameterResolver.class)
 public class BankAccountDITest {
     @Test
-    @DisplayName("Deposit 400 successfully")
+    @DisplayName("Deposit 500 successfully")
     public void testDeposit(BankAccount bankAccount) {
         bankAccount.deposit(500);
         assertEquals(500, bankAccount.getBalance());
