@@ -1,4 +1,3 @@
-@SuppressWarnings({"FieldMayBeFinal", "UnusedReturnValue", "unused"})
 public class BankAccount {
     private final double minimumBalance;
     private double balance;
@@ -14,6 +13,7 @@ public class BankAccount {
         return balance;
     }
 
+    @SuppressWarnings("unused")
     public double getMinimumBalance() {
         return minimumBalance;
     }
@@ -22,6 +22,7 @@ public class BankAccount {
         return isActive;
     }
 
+    @SuppressWarnings("unused")
     public void setActive(boolean active) {
         isActive = active;
     }
@@ -34,6 +35,7 @@ public class BankAccount {
         this.holderName = holderName;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public double withdraw(double amount) {
         if (balance - amount > minimumBalance) {
             balance -= amount;
@@ -43,7 +45,13 @@ public class BankAccount {
         }
     }
 
+    @SuppressWarnings("CommentedOutCode")
     public double deposit(double amount) {
+        //try {
+        //    Thread.sleep(1);
+        //} catch (InterruptedException e) {
+        //    e.printStackTrace();
+        //}
         return balance += amount;
     }
 }

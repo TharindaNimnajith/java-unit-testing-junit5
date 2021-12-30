@@ -52,12 +52,12 @@ public class BankAccountAssertionsTest {
         assertThrows(RuntimeException.class, () -> bankAccount.withdraw(2000));
     }
 
-    @SuppressWarnings("TestFailedLine")
+    //@SuppressWarnings("TestFailedLine")
     @Test
     @DisplayName("Test no exceptions for withdraw and deposit")
     public void testWithdrawAndDepositWithoutExceptions() {
         BankAccount bankAccount = new BankAccount(500, -1000);
-        fail();
+        //fail();
         assertAll(() -> bankAccount.deposit(200), () -> bankAccount.withdraw(450));
     }
 
@@ -65,6 +65,8 @@ public class BankAccountAssertionsTest {
     @DisplayName("Test speed deposit")
     public void testDepositTimeout() {
         BankAccount bankAccount = new BankAccount(400, 0);
-        assertTimeout(Duration.ofNanos(10), () -> bankAccount.deposit(200));
+        assertTimeout(Duration.ofNanos(1), () -> bankAccount.deposit(200));
+        //assertEquals(0.33, 1/3, 0.01);
+        //assertEquals(0.33, 1/3, "Not the same value");
     }
 }

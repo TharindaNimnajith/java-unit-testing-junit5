@@ -4,8 +4,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assumptions.*;
 
-@SuppressWarnings("ConstantConditions")
 public class BankAccountAssumptionsTest {
+    @SuppressWarnings("ConstantConditions")
     @Test
     @DisplayName("Test activation account after creation")
     public void testActive0() {
@@ -14,6 +14,7 @@ public class BankAccountAssumptionsTest {
         assertTrue(bankAccount.isActive());
     }
 
+    @SuppressWarnings("ConstantConditions")
     @Test
     @DisplayName("Test activation account after creation")
     public void testActive1() {
@@ -22,6 +23,7 @@ public class BankAccountAssumptionsTest {
         assertTrue(bankAccount.isActive());
     }
 
+    @SuppressWarnings("ConstantConditions")
     @Test
     @DisplayName("Test activation account after creation")
     public void testActive2() {

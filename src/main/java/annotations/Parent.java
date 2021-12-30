@@ -1,7 +1,7 @@
 package annotations;
 
-@SuppressWarnings("unused")
 public class Parent {
+    @SuppressWarnings("unused")
     public void someMethod() {
     }
 
