@@ -1,21 +1,15 @@
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BankAccountBeforeAndAfterTest {
+public class BankAccountBeforeAndAfterEachTest {
     static BankAccount bankAccount;
 
-    @BeforeAll
-    public static void prepTest() {
+    @BeforeEach
+    public void prepTest() {
         System.out.println("Hi!");
         bankAccount = new BankAccount(500, 0);
-    }
-
-    @AfterAll
-    public static void endTest() {
-        System.out.println("Bye!");
     }
 
     @Test
@@ -27,6 +21,11 @@ public class BankAccountBeforeAndAfterTest {
     @Test
     public void testDeposit() {
         bankAccount.deposit(500);
-        assertEquals(700, bankAccount.getBalance());
+        assertEquals(1000, bankAccount.getBalance());
+    }
+
+    @BeforeEach
+    public void endTest() {
+        System.out.println("Bye!");
     }
 }
