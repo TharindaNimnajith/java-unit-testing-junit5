@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class BankAccountOrderedExecutionTest {
-    static BankAccount bankAccount = new BankAccount(0, 0);
+    static final BankAccount bankAccount = new BankAccount(0, 0);
 
     @Test
     @Order(2)

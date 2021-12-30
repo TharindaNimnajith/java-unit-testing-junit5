@@ -1,7 +1,7 @@
 @SuppressWarnings({"FieldMayBeFinal", "UnusedReturnValue", "unused"})
 public class BankAccount {
+    private final double minimumBalance;
     private double balance;
-    private double minimumBalance;
     private boolean isActive = true;
     private String holderName;
 

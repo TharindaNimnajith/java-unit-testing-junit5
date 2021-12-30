@@ -52,6 +52,7 @@ public class BankAccountAssertionsTest {
         assertThrows(RuntimeException.class, () -> bankAccount.withdraw(2000));
     }
 
+    @SuppressWarnings("TestFailedLine")
     @Test
     @DisplayName("Test no exceptions for withdraw and deposit")
     public void testWithdrawAndDepositWithoutExceptions() {

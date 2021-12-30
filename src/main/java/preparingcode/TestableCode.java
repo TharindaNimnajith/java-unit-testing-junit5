@@ -4,8 +4,8 @@ import java.time.LocalDateTime;
 import java.util.Arrays;
 
 public class TestableCode {
-    public static String[] knownNames = {"Zeynep", "Tess", "Marina", "Jade", "Eric", "Jamal", "Malika", "James"};
-    public static String[] specialNames = {"Zach", "Martin", "Noah", "Tess"};
+    public static final String[] knownNames = {"Zeynep", "Tess", "Marina", "Jade", "Eric", "Jamal", "Malika", "James"};
+    public static final String[] specialNames = {"Zach", "Martin", "Noah", "Tess"};
 
     public String greetUser(String name) {
         String greetUser = "";

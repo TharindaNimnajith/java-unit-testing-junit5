@@ -32,6 +32,7 @@ public class BankAccountTimeoutTest {
             e.printStackTrace();
         }
         bankAccount.deposit(300);
+        //noinspection CodeBlock2Expr
         assertTimeout(Duration.ofMillis(500), () -> {
             Thread.sleep(10);
         });
