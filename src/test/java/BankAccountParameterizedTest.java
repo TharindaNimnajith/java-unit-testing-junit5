@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @ExtendWith(BankAccountParameterResolver.class)
-public class BankAccountParameterizedTestTest {
+public class BankAccountParameterizedTest {
     @ParameterizedTest
     @ValueSource(ints = {100, 400, 800, 1000})
     @DisplayName("Depositing successfully")

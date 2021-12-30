@@ -6,7 +6,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(BankAccountParameterResolver.class)
-public class BankAccountRepeatedTestTest {
+public class BankAccountRepeatedTest {
     @RepeatedTest(5)
     @DisplayName("Deposit 500 successfully")
     public void testDeposit(BankAccount bankAccount) {
@@ -19,6 +19,6 @@ public class BankAccountRepeatedTestTest {
     public void testDepositRepetitionInfo(BankAccount bankAccount, RepetitionInfo repetitionInfo) {
         bankAccount.deposit(500);
         assertEquals(500, bankAccount.getBalance());
-        System.out.println("Nr: " + repetitionInfo.getCurrentRepetition());
+        System.out.println("Number: " + repetitionInfo.getCurrentRepetition());
     }
 }
